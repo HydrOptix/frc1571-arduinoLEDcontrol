@@ -7,7 +7,7 @@ An Arduino sketch to allow for serial control of a single pin LED strip
 
 'F' - End the command stream and update working variables
 
-'M' + mode - Set the LED animation mode
+'M' + * *mode* * - Set the LED animation mode
   0 - Off
   1 - Solid Color
   2 - Color Wipe
@@ -17,19 +17,19 @@ An Arduino sketch to allow for serial control of a single pin LED strip
   6 - Theater Chase Rainbow
   E.G. Send "M3" to set LED mode to Theater Chase
   
-'R' + value - Set the red intensity value for applicable modes
+'R' + * *value* * - Set the red intensity value for applicable modes
   0-255
   E.G. Send "R255" to set full red intensity
   
-'G' + value - Set the green intensity value for applicable modes
+'G' + * *value* * - Set the green intensity value for applicable modes
   0-255
   E.G. Send "G128" to set half green intensity
   
-'B' + value - Set the blue intensity value for applicable modes
+'B' + * *value* * - Set the blue intensity value for applicable modes
   0-255
   E.G. Send "B0" to set no blue intensity
   
-'W' + value - Set the number of milliseconds to delay before next update
+'W' + * *value* * - Set the number of milliseconds to delay before next update
   No. of milliseconds
   E.G. Send "W100" to delay 100 milliseconds between each update of the LEDs
   
