@@ -21,7 +21,7 @@ An Arduino sketch to allow for serial control of a single pin LED strip
 	0-255<br />
 	E.G. Send "R255" to set full red intensity
   
-###'G' + * *value* * - Set the green intensity value for applicable modes
+###'G' + * *value* * - Set the green intensity value for applicable modes<br />
   0-255<br />
   E.G. Send "G128" to set half green intensity
   
