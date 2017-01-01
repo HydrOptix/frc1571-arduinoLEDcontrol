@@ -26,7 +26,7 @@ An Arduino sketch to allow for serial control of a single pin LED strip
   E.G. Send "G128" to set half green intensity
   
 ###'B' + * *value* * - Set the blue intensity value for applicable modes
-  0-255<br />
+  0-255
   E.G. Send "B0" to set no blue intensity
   
 ###'W' + * *value* * - Set the number of milliseconds to delay before next update
