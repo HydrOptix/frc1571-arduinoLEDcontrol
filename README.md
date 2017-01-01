@@ -34,6 +34,7 @@ Valid serial commands:
   E.G. Send "W100" to delay 100 milliseconds between each update of the LEDs
   
 Full Serial Command Example
+
   In order to set a cyan color wipe with a one-tenth second delay between each update:
   Send "SM2R80G255B255W100F" or "S M2 R80 G255 B255 W100 F" (Spaces and other unused character will be discarded)
   
