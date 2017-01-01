@@ -1,36 +1,37 @@
 # frc1571-arduinoLEDcontrol
 An Arduino sketch to allow for serial control of a single pin LED strip
 
-**Valid serial commands**
+##Valid serial commands
 
-'S' - Start the command stream
+###'S' - Start the command stream
 
-'F' - End the command stream and update working variables
+###'F' - End the command stream and update working variables
 
-'M' + * *mode* * - Set the LED animation mode
-  0 - Off
-  1 - Solid Color
-  2 - Color Wipe
-  3 - Theater Chase
-  4 - Rainbow
-  5 - Rainbow Cycle
-  6 - Theater Chase Rainbow
+###'M' + * *mode* * - Set the LED animation mode<br />
+  0 - Off<br />
+  1 - Solid Color<br />
+  2 - Color Wipe<br />
+  3 - Theater Chase<br />
+  4 - Rainbow<br />
+  5 - Rainbow Cycle<br />
+  6 - Theater Chase Rainbow<br />
   E.G. Send "M3" to set LED mode to Theater Chase
   
-'R' + * *value* * - Set the red intensity value for applicable modes
-  0-255
-  E.G. Send "R255" to set full red intensity
+###'R' + * *value* * - Set the red intensity value for applicable modes
+
+	0-255<br />
+	E.G. Send "R255" to set full red intensity
   
-'G' + * *value* * - Set the green intensity value for applicable modes
-  0-255
+###'G' + * *value* * - Set the green intensity value for applicable modes
+  0-255<br />
   E.G. Send "G128" to set half green intensity
   
-'B' + * *value* * - Set the blue intensity value for applicable modes
-  0-255
+###'B' + * *value* * - Set the blue intensity value for applicable modes
+  0-255<br />
   E.G. Send "B0" to set no blue intensity
   
-'W' + * *value* * - Set the number of milliseconds to delay before next update
-  No. of milliseconds
+###'W' + * *value* * - Set the number of milliseconds to delay before next update
+  No. of milliseconds<br />
   E.G. Send "W100" to delay 100 milliseconds between each update of the LEDs
   
 **Full Serial Command Example**
