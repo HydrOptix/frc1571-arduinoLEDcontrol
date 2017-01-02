@@ -114,6 +114,14 @@ void loop() {
     colorFade(r,g,b);
   } else if(ledMode == 5) {
     oscillatingFade(lastR,lastG,lastB,r,g,b);
+  } else if(ledMode == 6) {
+    theaterChase(currentColor);
+  } else if(ledMode == 7) {
+    rainbow();
+  } else if(ledMode == 8) {
+    rainbowCycle();
+  } else if(ledMode == 9) {
+    rainbowTheaterChase();
   }
   
   delay(wait);
@@ -249,4 +257,77 @@ void oscillatingFade(uint8_t rFrom, uint8_t gFrom, uint8_t bFrom, uint8_t rTo, u
     } else {
       index = 0;
     }
+}
+
+void theaterChase(uint32_t color) {
+  for(uint16_t i=0; i < strip.numPixels(); i=i+3) {
+    strip.setPixelColor(index+i,color);
+  }
+  strip.show();
+
+  for(uint16_t i=0; i < strip.numPixels(); i=i+3) {
+    strip.setPixelColor(index+i,0);
+  }
+
+  if(index < 3) {
+      index++;
+    } else {
+      index = 0;
+    }
+}
+
+void rainbow() {
+  for(uint16_t i=0; i<strip.numPixels(); i++) {
+    strip.setPixelColor(i, Wheel((i+index) & 255));
+  }
+  strip.show();
+
+  if(index < 256) {
+    index++;
+  } else {
+    index = 0;
+  }
+}
+
+void rainbowCycle() {
+  for(uint16_t i=0; i < strip.numPixels(); i++) {
+    strip.setPixelColor(i, Wheel(((i * 256 / strip.numPixels()) + index) & 255));
+  }
+  strip.show();
+  
+  if(index < 256) {
+    index++;
+  } else {
+    index = 0;
+  }
+}
+
+void rainbowTheaterChase() {
+    for(uint16_t i=0; i < strip.numPixels(); i=i+3) {
+      strip.setPixelColor(i+(index%3), Wheel((i+index) % 255));
+    }
+    strip.show();
+
+    for(uint16_t i=0; i < strip.numPixels(); i=i+3) {
+      strip.setPixelColor(i+index%3, 0);
+    }
+  
+  if(index < 256) {
+    index++;
+  } else {
+    index = 0;
+  }
+}
+
+uint32_t Wheel(byte WheelPos) {
+  WheelPos = 255 - WheelPos;
+  if(WheelPos < 85) {
+    return strip.Color(255 - WheelPos * 3, 0, WheelPos * 3);
+  }
+  if(WheelPos < 170) {
+    WheelPos -= 85;
+    return strip.Color(0, WheelPos * 3, 255 - WheelPos * 3);
+  }
+  WheelPos -= 170;
+  return strip.Color(WheelPos * 3, 255 - WheelPos * 3, 0);
 }
