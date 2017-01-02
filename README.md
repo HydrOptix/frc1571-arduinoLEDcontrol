@@ -3,6 +3,8 @@ An Arduino sketch to allow for serial control of a single pin LED strip
 
 ##Valid serial commands
 
+###'H' - Display the help dialog
+
 ###'S' - Start the command stream
 
 ###'F' - End the command stream and update working variables
@@ -10,11 +12,14 @@ An Arduino sketch to allow for serial control of a single pin LED strip
 ###'M' + * *mode* * - Set the LED animation mode<br />
   0 - Solid Color<br />
   1 - Color Wipe<br />
-  2 - Color Fade<br />
-  3 - Theater Chase<br />
-  4 - Rainbow<br />
-  5 - Rainbow Cycle<br />
-  6 - Theater Chase Rainbow<br />
+  3 - Continuous Wipe<br />
+  4 - Oscillating Wipe<br />
+  5 - Color Fade<br />
+  6 - Oscillating Fade<br />
+  7 - Theater Chase<br />
+  8 - Rainbow<br />
+  9 - Rainbow Cycle<br />
+  10 - Theater Chase Rainbow<br />
   E.G. Send "M3" to set LED mode to Theater Chase
   
 ###'R' + * *value* * - Set the red intensity value for applicable modes
