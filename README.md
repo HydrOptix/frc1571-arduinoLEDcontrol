@@ -23,10 +23,10 @@ An Arduino sketch to allow for serial control of a single pin LED strip
   E.G. Send "M3" to set LED mode to Theater Chase
   
 ###'R' + * *value* * - Set the red intensity value for applicable modes
-	0-255<br />
-	E.G. Send "R255" to set full red intensity
+  0-255
+  E.G. Send "R255" to set full red intensity
   
-###'G' + * *value* * - Set the green intensity value for applicable modes<br />
+###'G' + * *value* * - Set the green intensity value for applicable modes
   0-255<br />
   E.G. Send "G128" to set half green intensity
   
