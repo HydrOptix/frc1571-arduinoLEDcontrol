@@ -1,5 +1,5 @@
 # frc1571-arduinoLEDcontrol
-An Arduino sketch to allow for serial control of a single pin LED strip
+An Arduino sketch using the NeoPixel library to allow for serial control of a single pin LED strip
 
 ##Valid serial commands
 
