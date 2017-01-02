@@ -41,7 +41,7 @@ An Arduino sketch to allow for serial control of a single pin LED strip
   
 **Full Serial Command Example**
 
-  In order to set a cyan color wipe with a one-tenth second delay between each update:
+  In order to set a continuous cyan color wipe with a one-tenth second delay between each update:
   Send "SM2R80G255B255W100F" or "S M2 R80 G255 B255 W100 F" (Spaces and other unused character will be discarded)
   
-  Serial commands are interchangeable and can be set more than once. For example the command "S M2 W30 G10 R255 B45 M3 G250 F" will set   the Arduino to mode 3 (Theater Chase), red 255, green 250, blue 45, wait 30ms (the last commands are the ones saved).
+  Serial commands are interchangeable and can be set more than once. For example the command "S M2 W30 G10 R255 B45 M3 G250 F" will set   the Arduino to mode 3 (Oscillating Wipe), red 255, green 250, blue 45, wait 30ms (the last commands are the ones saved).
