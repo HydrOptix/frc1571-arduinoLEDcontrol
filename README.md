@@ -16,6 +16,7 @@ An Arduino sketch to allow for serial control of a single pin LED strip
   3 - Oscillating Wipe<br />
   4 - Color Fade<br />
   5 - Oscillating Fade<br />
+      >Note: Will fade to most recently set colors and from last set colors. E.G. send "S M5 R0 G255 B0 W20 F S R255 G0 B0 F" to oscillate between green and red. <br />
   6 - Theater Chase<br />
   7 - Rainbow<br />
   8 - Rainbow Cycle<br />
