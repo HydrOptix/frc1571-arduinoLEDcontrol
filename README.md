@@ -12,14 +12,14 @@ An Arduino sketch to allow for serial control of a single pin LED strip
 ###'M' + * *mode* * - Set the LED animation mode<br />
   0 - Solid Color<br />
   1 - Color Wipe<br />
-  3 - Continuous Wipe<br />
-  4 - Oscillating Wipe<br />
-  5 - Color Fade<br />
-  6 - Oscillating Fade<br />
-  7 - Theater Chase<br />
-  8 - Rainbow<br />
-  9 - Rainbow Cycle<br />
-  10 - Theater Chase Rainbow<br />
+  2 - Continuous Wipe<br />
+  3 - Oscillating Wipe<br />
+  4 - Color Fade<br />
+  5 - Oscillating Fade<br />
+  6 - Theater Chase<br />
+  7 - Rainbow<br />
+  8 - Rainbow Cycle<br />
+  9 - Theater Chase Rainbow<br />
   E.G. Send "M3" to set LED mode to Theater Chase
   
 ###'R' + * *value* * - Set the red intensity value for applicable modes
